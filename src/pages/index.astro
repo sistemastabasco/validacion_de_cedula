@@ -1,0 +1,156 @@
+---
+const contratista = {
+  clave: "SFP-RUC-04601",
+  nombre: "EDGAR EDUARDO ISIDRO GARCÍA",
+  rfc: "IIGE900828B33",
+  capital: "$1,817,651.00",
+  vigencia: "16/06/2024 - 17/07/2025",
+  especialidades: [
+    110, 120, 210, 220, 240, 250, 270,
+    330, 450, 610, 630, 670, 730
+  ]
+};
+
+const especialidadesTexto = `2024 (${contratista.especialidades.join(', ')})`;
+---
+
+
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Validación de Cédula - Tabasco</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+    <style>
+      body {
+        font-family: 'Roboto', sans-serif;
+        margin: 0;
+        padding: 0;
+        background: #fff;
+        color: #333;
+      }
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #a72045;
+  padding: 0.5rem 1rem;
+  color: white;
+  margin-bottom: 1rem; /* 👈 Este espacio separa la franja */
+}
+
+
+      .navbar img {
+        height: 30px;
+      }
+
+      .navbar .menu-icon {
+        font-size: 26px;
+        cursor: pointer;
+      }
+
+      .banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #a72045;
+  color: white;
+  padding: 0.6rem 1rem;
+  border-top: 5px solid #cbb26a;
+  border-bottom: 5px solid #cbb26a;
+  flex-wrap: nowrap;
+  gap: 1rem;
+}
+
+.banner-logo {
+  max-height: 40px;
+  width: auto;
+  flex-shrink: 0;
+}
+
+.banner-text {
+  flex: 1;
+  text-align: center;
+  font-weight: bold;
+  line-height: 1.3;
+  font-size: 1rem;
+}
+
+      .container {
+        padding: 2rem;
+        max-width: 600px;
+        margin: auto;
+      }
+
+      .section {
+        background: #f9f9f9;
+        border-radius: 10px;
+        padding: 1.5rem;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      }
+
+      .label {
+        font-weight: bold;
+        display: inline-block;
+        margin-bottom: 5px;
+      }
+
+      .item {
+        margin: 0.7rem 0;
+      }
+
+      .centered {
+        text-align: center;
+      }
+
+      img.escudo {
+        display: block;
+        margin: 1rem auto;
+        max-height: 120px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar superior -->
+    <nav class="navbar">
+      <a href="https://www.tabasco.gob.mx" target="_blank">
+        <img src="/logos/tabasco-gob.png" alt="Logo Tabasco.gob.mx" />
+      </a>
+      <div class="menu-icon">☰</div>
+    </nav>
+
+    <!-- Franja de encabezado -->
+  <div class="banner">
+  <img src="/logos/tabasco-gob.png" alt="Logo Tabasco" class="banner-logo" />
+
+  <div class="banner-text">
+    <div>SISTEMA ELECTRÓNICO INTEGRAL</div>
+    <div>DE REGISTRO ÚNICO DE CONTRATISTAS</div>
+  </div>
+
+  <img src="/logos/escudo-tabasco.png" alt="Escudo Tabasco" class="banner-logo" />
+</div>
+
+
+    <!-- Escudo centrado -->
+      <img src="/logos/escudo-tabasco.png" alt="Escudo de Tabasco" class="escudo" />
+    </a>
+
+    <!-- Contenido principal -->
+    <div class="container">
+      <h2 class="centered">
+        VALIDACIÓN DE LA CÉDULA DEL REGISTRO ÚNICO DE CONTRATISTAS DEL ESTADO DE TABASCO
+      </h2>
+
+      <div class="section">
+        <p class="item">🔖 <span class="label">Clave Contratista:</span> {contratista.clave}</p>
+        <p class="item">👤 <span class="label">Nombre Contratista:</span> {contratista.nombre}</p>
+        <p class="item">💳 <span class="label">RFC:</span> {contratista.rfc}</p>
+        <p class="item">💲 <span class="label">Capital Contable:</span> {contratista.capital}</p>
+        <p class="item">📅 <span class="label">Vigencia:</span> {contratista.vigencia}</p>
+<p class="item">📁 <span class="label">Especialidades:</span> {especialidadesTexto}</p>
+      </div>
+    </div>
+  </body>
+</html>
