@@ -4,7 +4,7 @@ const contratista = {
   nombre: "EDGAR EDUARDO ISIDRO GARCÍA",
   rfc: "IIGE900828B33",
   capital: "$1,817,651.00",
-  vigencia: "16/06/2024 - 17/07/2025",
+  vigencia: "17/07/2024 - 17/07/2025",
   especialidades: [
     110, 120, 210, 220, 240, 250, 270,
     330, 450, 610, 630, 670, 730
@@ -109,6 +109,38 @@ const especialidadesTexto = `2024 (${contratista.especialidades.join(', ')})`;
         margin: 1rem auto;
         max-height: 120px;
       }
+
+      <style>
+
+        .section {
+  text-align: center;
+  padding: 1rem;
+}
+
+.item {
+  margin-bottom: 1.5rem;
+}
+
+.label {
+  font-weight: bold;
+  color: black;
+  font-family: "Segoe UI Symbol", "Arial", sans-serif;
+  font-size: 1rem;
+}
+
+.value {
+  color: black;
+  font-family: "Arial", sans-serif;
+  font-size: 1rem;
+  margin-top: 0.3rem;
+}
+
+.item {
+  filter: grayscale(1);
+}
+
+</style>
+
     </style>
   </head>
   <body>
@@ -143,14 +175,39 @@ const especialidadesTexto = `2024 (${contratista.especialidades.join(', ')})`;
         VALIDACIÓN DE LA CÉDULA DEL REGISTRO ÚNICO DE CONTRATISTAS DEL ESTADO DE TABASCO
       </h2>
 
-      <div class="section">
-        <p class="item">🔖 <span class="label">Clave Contratista:</span> {contratista.clave}</p>
-        <p class="item">👤 <span class="label">Nombre Contratista:</span> {contratista.nombre}</p>
-        <p class="item">💳 <span class="label">RFC:</span> {contratista.rfc}</p>
-        <p class="item">💲 <span class="label">Capital Contable:</span> {contratista.capital}</p>
-        <p class="item">📅 <span class="label">Vigencia:</span> {contratista.vigencia}</p>
-<p class="item">📁 <span class="label">Especialidades:</span> {especialidadesTexto}</p>
-      </div>
+<div class="section">
+  <div class="item">
+    <div class="label">🔖 Clave Contratista:</div>
+    <div class="value">{contratista.clave}</div>
+  </div>
+
+  <div class="item">
+    <div class="label">👤 Nombre Contratista:</div>
+    <div class="value">{contratista.nombre}</div>
+  </div>
+
+  <div class="item">
+    <div class="label">💳 RFC:</div>
+    <div class="value">{contratista.rfc}</div>
+  </div>
+
+  <div class="item">
+    <div class="label">💲 Capital Contable:</div>
+    <div class="value">{contratista.capital}</div>
+  </div>
+
+  <div class="item">
+    <div class="label">📅 Vigencia:</div>
+    <div class="value">{contratista.vigencia}</div>
+  </div>
+
+  <div class="item">
+    <div class="label">📁 Especialidades:</div>
+    <div class="value">2024 (110, 120, 210, 220, 240, 250, 270, 330, 450, 610, 630, 670, 730)</div>
+  </div>
+</div>
+
+
     </div>
   </body>
 </html>
