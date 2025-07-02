@@ -34,7 +34,7 @@ const especialidadesTexto = `2024 (${contratista.especialidades.join(', ')})`;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #a72045;
+  background: #8f213e;
   padding: 0.5rem 1rem;
   color: white;
   margin-bottom: 1rem; /* 👈 Este espacio separa la franja */
@@ -50,31 +50,15 @@ const especialidadesTexto = `2024 (${contratista.especialidades.join(', ')})`;
         cursor: pointer;
       }
 
-      .banner {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: #a72045;
-  color: white;
-  padding: 0.6rem 1rem;
-  border-top: 5px solid #cbb26a;
-  border-bottom: 5px solid #cbb26a;
-  flex-wrap: nowrap;
-  gap: 1rem;
+.banner {
+  width: 100%;
+  overflow: hidden;
 }
 
-.banner-logo {
-  max-height: 40px;
-  width: auto;
-  flex-shrink: 0;
-}
-
-.banner-text {
-  flex: 1;
-  text-align: center;
-  font-weight: bold;
-  line-height: 1.3;
-  font-size: 1rem;
+.banner-img {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
       .container {
@@ -94,7 +78,6 @@ const especialidadesTexto = `2024 (${contratista.especialidades.join(', ')})`;
         font-weight: bold;
         display: inline-block;
         margin-bottom: 5px;
-        
       }
 
       .item {
@@ -108,7 +91,7 @@ const especialidadesTexto = `2024 (${contratista.especialidades.join(', ')})`;
       img.escudo {
         display: block;
         margin: 1rem auto;
-        max-height: 120px;
+        max-height: 220px;
       }
 
       <style>
@@ -120,7 +103,6 @@ const especialidadesTexto = `2024 (${contratista.especialidades.join(', ')})`;
 
 .item {
   margin-bottom: 1.5rem;
-  text-align: center;
 }
 
 .label {
@@ -128,7 +110,6 @@ const especialidadesTexto = `2024 (${contratista.especialidades.join(', ')})`;
   color: black;
   font-family: "Segoe UI Symbol", "Arial", sans-serif;
   font-size: 1rem;
-  text-align: center;
 }
 
 .value {
@@ -141,6 +122,7 @@ const especialidadesTexto = `2024 (${contratista.especialidades.join(', ')})`;
 
 .item {
   filter: grayscale(1);
+   text-align: center;
 }
 
 </style>
@@ -151,26 +133,19 @@ const especialidadesTexto = `2024 (${contratista.especialidades.join(', ')})`;
     <!-- Navbar superior -->
     <nav class="navbar">
       <a href="https://www.tabasco.gob.mx" target="_blank">
-        <img src="/logos/tabasco-gob.png" alt="Logo Tabasco.gob.mx" />
+        <img src="/logos/tabasco-gob.jpg" alt="Logo Tabasco.gob.mx" />
       </a>
       <div class="menu-icon">☰</div>
     </nav>
 
     <!-- Franja de encabezado -->
-  <div class="banner">
-  <img src="/logos/tabasco-gob.png" alt="Logo Tabasco" class="banner-logo" />
-
-  <div class="banner-text">
-    <div>SISTEMA ELECTRÓNICO INTEGRAL</div>
-    <div>DE REGISTRO ÚNICO DE CONTRATISTAS</div>
-  </div>
-
-  <img src="/logos/escudo-tabasco.png" alt="Escudo Tabasco" class="banner-logo" />
+<div class="banner">
+  <img src="/banner.jpg" alt="Banner principal" class="banner-img" />
 </div>
 
 
     <!-- Escudo centrado -->
-      <img src="/logos/escudo-tabasco.png" alt="Escudo de Tabasco" class="escudo" />
+      <img src="/logos/escudo-tabasco.jpg" alt="Escudo de Tabasco" class="escudo" />
     </a>
 
     <!-- Contenido principal -->
