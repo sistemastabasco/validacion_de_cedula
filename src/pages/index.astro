@@ -68,7 +68,7 @@ const especialidadesTexto = `2024 (${contratista.especialidades.join(', ')})`;
       }
 
       .section {
-        background: #f9f9f9;
+        background: #ffffff;
         border-radius: 10px;
         padding: 1.5rem;
         box-shadow: 0 2px 5px rgba(0,0,0,0.1);
@@ -107,6 +107,8 @@ const especialidadesTexto = `2024 (${contratista.especialidades.join(', ')})`;
 
 .label {
   font-weight: bold;
+  background: rgb(139, 141, 168)
+
   color: black;
   font-family: "Segoe UI Symbol", "Arial", sans-serif;
   font-size: 1rem;
@@ -124,6 +126,25 @@ const especialidadesTexto = `2024 (${contratista.especialidades.join(', ')})`;
   filter: grayscale(1);
    text-align: center;
 }
+
+.footer-gris {
+  background-color:  #303238;      /* Gris claro */
+  width: 100vw;                   /* Ocupar TODO el ancho de la pantalla real */
+  margin-left: calc(-50vw + 50%);/* Eliminar padding/margen lateral del body si hay */
+  padding: 2rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+
+
 
 </style>
 
@@ -184,9 +205,15 @@ const especialidadesTexto = `2024 (${contratista.especialidades.join(', ')})`;
     <div class="label">📁 Especialidades:</div>
     <div class="value">2024 (110, 120, 210, 220, 240, 250, 270, 330, 450, 610, 630, 670, 730)</div>
   </div>
-</div>
+
+  </body>
+  </div>
+
+<footer class="footer-gris">
+  <img src="/footer.png" alt="Imagen decorativa" class="footer-img" />
+</footer>
+
 
 
     </div>
-  </body>
 </html>
